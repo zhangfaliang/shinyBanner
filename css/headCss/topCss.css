@@ -1,4 +1,8 @@
 *{margin:0;padding:0 ;/*overflow: hidden*/}
+html,body{
+    height: 100%;
+    width: 100%;
+}
 body, textarea, select, input, button {
     font-size: 12px;
     color: #333;
@@ -449,16 +453,16 @@ em, i {
 
 }
 .body_content{
-     background: gainsboro;
+     background: #F5F5F5;
     background: url("../../img/contextImg/wrap1.png")repeat-y 100% 100%;
     position: relative;
 }
 .content_wrap{
     width: 986px;
     min-height: 1200px;
-    _height: 1200px;
+    height: 1450px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: white;
     border: 1px solid #d3d3d3;
     border-width: 0 1px;
 
@@ -474,7 +478,7 @@ em, i {
     float: right;
     width: 252px;
     zoom: 1;
-    height: 1200px;
+    height: 1450px;
     background: url("../../img/contextImg/wrap1.png")repeat-y -729px 0;
 
 }
@@ -729,20 +733,23 @@ background-position: 0 -570px;
     height: 472px;
     margin-top: 20px;
     padding-left: 1px;
+    width: 676px;
 
 }
 .dl1{
-    float: left;
-    width: 230px;
+    float: right;
+    position: relative;
+    left: -37px;
+    width: 220px;
+    height: 483px;
     border: 1px solid lightgrey;
 
 }
 .dl1 .dl1_top{
     float: left;
     height: 100px;
-    width: 211px;
-    padding: 20px 0 0 19px;
-    background: gainsboro;
+    width: 220px;
+    background: ghostwhite;
 
 }
 .titl{
@@ -752,7 +759,7 @@ background-position: 0 -570px;
 }
 .cover{
     position: relative;
-    top: -108px;
+    top: -90px;
     left: 17px;
     width: 80px;
     height: 80px;
@@ -767,7 +774,7 @@ background-position: 0 -570px;
     width: 80px;
     height: 80px;
 }
-#btn .play{
+#btn .play,#btn1 .play,#btn2 .play{
     display: block;
     height: 30px;
     width: 30px;
@@ -782,17 +789,16 @@ background-position: 0 -570px;
 .f-fs1 {
     display: block;
     position: relative;
-    top: -101px;
+    top: -83px;
     left: 21px;
 }
-#btn .cun{
+#btn .cun,#btn1 .cun,#btn2 .cun{
     display: block;
     position: relative;
     height: 30px;
     width: 30px;
     top: 17px;
     left: 151px;
-    background: hotpink;
     background: url("../../img/contextImg/index.png") -296px -201px;
 }
 #btn .cun:hover{
@@ -802,27 +808,841 @@ background-position: 0 -570px;
     background-position:  -262px -229px;
 }
 .dt_botton{
-    position: relative;
     display: block;
-    top: 40px;
-    background: hotpink;
+    background: gainsboro;
     height: 352px;
-    width: 230px;
+    width: 220px;
+    position: relative;
+    top: 40px;
 }
-.dt_botton ol{
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    width: 100%;
-    height: 100%;
-}
-.dt_botton ol li{
-    padding: 0;
-    margin: 0;
-    height: 10%;
-    text-align: center;
-    list-style: none;
-    width: 100%;
-    background: navajowhite;
 
+.dt_botton ul{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.dt_botton ul li{
+    position: relative;
+    top: -114px;
+    height: 10%;
+    line-height: 35.2px;
+    text-align: center;
+    width: 100%;
+}
+.dt_botton ul li:nth-child(even){
+background: #E8E8E8;
+}
+.dt_botton .no{
+    display: block;
+    position: relative;
+    left: 35px;
+    float: left;
+    color: red;
+}
+.dt_botton .no_a{
+    display: inline-block;
+    position: absolute;
+    left: 53px;
+    text-align: left;
+    height: 35px;
+    width: 120px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.dt_botton .no_a:hover{
+    display: inline-block;
+    position: absolute;
+    left: 53px;
+    text-align: left;
+    height: 30px;
+    width: 70px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}
+.oper{
+    display: inline-block;
+    float: right;height: 35px;
+    width: 100px;
+    display: none;
+}
+
+.dt_botton ul li:nth-child(even):hover .oper{
+    position:absolute;
+    right: 0px;
+    display: inline-block;
+    background: #E8E8E8;
+
+}
+.dt_botton ul li:nth-child(odd):hover .oper{
+    position:absolute;
+    right: 0px;
+    display: inline-block;
+    background: gainsboro;
+
+}
+
+.oper a{
+    display: inline-block;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    margin-left: 4px;
+    position: relative;
+    top: 6px;
+    background: url("../../img/contextImg/index.png") no-repeat 9999px 9999px;
+
+}
+.oper a:nth-child(1){
+    background-position:-267px -263px;
+}
+.oper a:nth-child(2){
+    background: url("../../img/contextImg/icon.png") no-repeat 3px -692px;;
+}
+.oper a:nth-child(3){
+    background-position:-295px -263px;;
+}
+#bottom{
+    height: 150px;
+    width: 100%;
+    background: ghostwhite;
+    border-top: 1px solid gainsboro;
+}
+.bottom_center{
+    height: 100%;
+    width: 73%;
+    margin: 0 auto 0;
+}
+.bottom_center1{
+    float: left;
+    height:60px;
+    width: 300px;
+
+}
+.bottom_center1 .cd{
+    float: left;
+    width: 247px;
+    height: 46px;
+    margin-top: 10px;
+    background: gold;
+    background: url("../../img/bottom/sprite.png") no-repeat -400px -80px;
+
+}
+.cd1{
+    float: left;
+    width: 247px;
+    height: 46px;
+    margin-top: 10px;
+    background: gold;
+    background: url("../../img/bottom/sprite.png") no-repeat -400px -125px;
+}
+.bottom_center2{
+    float: left;
+    height: 60px;
+    width: 300px;
+}
+.bottom_center3{
+    float: right;
+    height: 40px;
+    width: 384px;
+    position: relative;
+    top: 57px;
+    line-height: 70px;
+
+}
+.bottom_center3 p,.bottom_center3 a{
+    height: 40px;
+    color: grey;
+}
+ .cd .sp1,.cd1 .sp1{
+    display: inline-block;
+    float: right;
+    width: 200px;
+     margin-bottom: 5px;
+
+
+
+} .cd .sp2,.cd1 .sp2{
+      display: inline-block;
+      float: right;
+      width: 200px;
+    color: grey;
+
+
+  }
+  .userlog{
+      height: 130px;
+      width: 100%;
+      background: gainsboro;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+
+  }
+.userlog .userSay{
+      width: 205px;
+      margin: 0 auto;
+      padding: 16px 0;
+      line-height: 22px;
+  }
+
+.login {
+
+    display: block;
+    width: 100px;
+    height: 31px;
+    line-height: 31px;
+    text-align: center;
+    color: #fff;
+    background:#C41A21;
+    box-shadow:  0 1px 0 #8a060b;
+    text-shadow: 0 1px 0 #8a060b;
+    border-radius: 5px;
+    margin: 0 auto ;
+}
+.login:hover{
+    background:#E80D0F;
+}
+.right1{
+    height: 480px;
+    width: 100%;
+}
+.singsay{
+    position: relative;
+    height: 30px;
+    margin: 0 20px;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+
+}
+.sing{
+    margin-top: 7px;
+float: left;
+}
+.singmore{
+    margin-top: 7px;
+    float: right;
+    font-size: 10px;
+    font-weight: normal;
+}
+.singName{
+    width: 220px;
+    height: 380px;
+    margin: 0 auto;
+}
+.singName li{
+    width: 100%;
+    margin-top:20px ;
+    height: 60px;
+    background: gainsboro;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.singName img {
+    display: block;
+    float: left;
+    background: forestgreen;
+    height: 62px;
+    width: 62px;
+
+}
+.singName div{
+    height: 60px;
+    width: 148px;
+    float: right;
+   
+}
+.singNameh{
+    display: block;
+    width: 80%;
+    float: right;
+    text-align: left;
+    margin-top: 5px;
+}
+.singNamep{
+    display: block;
+    margin-top: 10px;
+    width: 80%;
+    float: right;
+    text-align: left;
+    color: grey;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.apply{
+    height: 25px;
+    width: 210px;
+    margin: 0 auto;
+    background: whitesmoke;
+    margin-top: 15px;
+    border-radius: 3px;
+    border: 1px solid gainsboro;
+
+}
+.apply a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 25px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+
+}
+.apply:hover{
+    background: white;
+}
+.right2{
+    margin-top: 20px;
+    height: 300px;
+    width: 250px;
+}
+.right2 h3{
+    position: relative;
+    height: 23px;
+    margin: 0 20px;
+    border-bottom: 1px solid #ccc;
+    color: #333;
+}
+.dt{
+    height: 230px;
+    width: 250px;
+    list-style: none;
+    margin: 0 auto;
+
+}
+.dt li{
+    margin: auto;
+    height: 40px;
+    margin-top: 15px;
+    width: 80%;
+
+}
+.putc{
+    height: 40px;
+    width: 40px;
+    float: left;
+    background: hotpink;
+}
+.putc img{
+
+    height: 100%;
+    width: 100%;
+}
+.info{
+    margin-left: 5px;
+    height: 40px;
+    width: 150px;
+    float: left;
+}
+.dt a{
+    position: relative;
+    top: -5px;
+}
+.info_img{
+    position: relative;
+    top: 3px;
+    display: inline-block;
+    height: 13px;
+    width: 11px;
+    background: url("../../img/contextImg/icon.png") no-repeat 0 1px;
+}
+.dt p{
+    color: grey;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.divLogin{
+
+   height : 190px;
+    width : 160px;
+   background: #2B2B2B;
+    position: relative;
+    top: 59px;
+    left: 854px;
+    border-radius: 5px;
+    border: 1px solid black;
+    display: none;
+
+}
+.divLogin ul{
+    position: relative;
+    top: -69px;
+    height : 190px;
+    width : 160px;
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+    color: grey;
+}
+.divLogin ul li{
+    height: 20%;
+    width: 100%;
+    background: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.divLogin ul li:hover{
+    background: black;
+    color: whitesmoke;
+}
+
+.divLogin .logep,.divLogin .logep2,.divLogin .logep3,.divLogin .logep4,.divLogin .logep5{
+    margin-top: 5px;
+    float: left;
+    margin-left: 10px;
+    height: 20px;
+    width: 20px;
+    background: red;
+   background: url("../../img/top/toplist.png") no-repeat 0 0 ;
+
+}
+.divLogin .logep2{
+    background-position: 0 -20px;
+}
+.divLogin .logep3{
+    background-position: 0 -40px;
+}
+.divLogin .logep4{
+    background-position: 0 -60px;
+}
+.divLogin .logep5{
+    background-position: 0 -80px;
+}
+
+.divLogin .logep1{
+    margin-top: 7px;
+    margin-left: 10px;
+    float: left;
+}
+
+#scrollTop1{
+    position: fixed;
+    bottom: 157px;
+    left: 1170px;
+    height: 44px;
+    width: 49px;
+    background: grey;
+    z-index: 44;
+    display: none;
+
+}
+
+#scrollTop1 a{
+    display: block;
+    background: url(../../img/right/sprite.png?a1bf977c3a867164cf26018ea8710148) no-repeat 0 9999px;
+    height: 100%;
+    width: 100%;
+    background-position: -265px -46px;
+}
+#scrollTop1 a:hover{
+
+    background-position: -325px -46px;
+}
+.bottom_play{
+    position: fixed;
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+    background: url("../../img/bottom/playbar.png");
+    background-position: 0 0;
+    background-repeat: repeat-x;
+    transform: translate(0,40px);
+    transition: 1s;
+}
+.bottom_play:hover{
+    transform: translate(0,0);
+}
+.bottom_playLeft{
+    height: 100%;
+    width: 90%;
+    float: left;
+
+}
+.bottom_playRight{
+    float: left;
+    height: 100%;
+    width: 10%;
+
+}
+.async{
+    position: relative;
+    top: -9px;
+    margin: auto;
+    height: 100%;
+    width: 65px;
+    background: black;
+    background: url("../../img/bottom/playbar.png") no-repeat 0 -385px;
+}
+.playCenter{
+    position: relative;
+    top: 9px;
+    float: right;
+    width: 980px;
+    height: 42px;
+}
+.playCenterLeft{
+    margin: 0 5px;
+    height: 42px;
+    width: 163px;
+    float: left;
+}
+.playCenterLeft a{
+    margin: 5px 5px;
+    display: inline;
+    float: left;
+    height: 28px;
+    width: 28px;
+    background: url("../../img/bottom/playbar.png") no-repeat 999px 999px;
+}
+.playCenterLeft  .lefta{
+    background-position: 0 -130px;
+
+}
+.playCenterLeft  .centera{
+    margin: 3px 5px;
+    height: 36px;
+    width: 36px;
+    background-position: 0 -204px;
+}
+.playCenterLeft  .righta{
+    background-position: -80px -130px;
+}
+
+.playCenterLeft  .lefta:hover{
+    background-position: -30px -130px;
+
+}
+.playCenterLeft  .centera:hover{
+    background-position: -40px -204px;
+}
+.playCenterLeft  .righta:hover{
+    background-position: -110px -130px;
+}
+.playPac{
+    margin-top: 5px;
+    display: block;
+    height: 34px;
+    width: 35px;
+    float: left;
+
+}
+.comePlay{
+    margin-top: 5px;
+    float: left;
+    width: 570px;
+    height: 37px;
+}
+.comePlayTop{
+    width: 570px;
+    height: 17px;
+}
+.singName{
+    display: inline;
+    color: whitesmoke;
+    float: left;
+    height: 17px;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.singMove{
+    float: left;
+    display: inline;
+    height: 17px;
+    width: 19px;
+    background: url("../../img/bottom/playbar.png") no-repeat 999px 999px;
+    background-position: 0 -57px;
+
+}
+.singMove:hover{
+
+    background-position: -20px -57px;
+}
+.perporName{
+    float: left;
+    display: inline;
+    height: 17px;
+    margin:0 15px;
+    color: grey;
+
+}
+.singLink{
+    float: left;
+    display: inline;
+    height: 17px;
+    width: 15px;
+    margin:0 15px;
+    background: url("../../img/bottom/playbar.png") no-repeat 999px 999px;
+    background-position: -110px -103px;
+}
+.singLink:hover{
+    background-position: -130px -103px;
+}
+.playingLeft{
+    display: inline;
+    float: left;
+    height: 24px;
+    width: 22px;
+    background: url("../../img/leftImg/iconall.png");
+    background-position: 0 -280px;
+    z-index: 15;
+    position: relative;
+}
+.playingCenter{
+    float: left;
+    margin-top: 5.5px;
+    margin-left: -15px;
+    height: 7px;
+    width: 455px;
+    float: left;
+    background: black;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    z-index: 1;
+    position: relative;
+}
+.timing{
+    display: inline;
+    float: left;
+    margin-top: 4px;
+    color: whitesmoke;
+}
+.addAndC{
+    width: 60px;
+    height: 36px;
+    float: left;
+}
+.adda,.showa{
+    display: block;
+    float: left;
+    height: 25px;
+    width: 25px;
+    background: url("../../img/bottom/playbar.png") no-repeat 999px 999px;
+}
+.adda{
+    background-position: -88px -163px;
+}
+.showa{
+    background-position: -114px -163px;
+}
+
+.adda:hover{
+    background-position: -88px -189px;
+}
+.showa:hover{
+    background-position: -114px -189px;
+}
+.sound{
+    float: right;
+    width: 109px;
+    height: 25px;
+}
+.sounda,.fora,.texta{
+
+display: block;
+    float: left;
+    height: 25px;
+    width: 25px;
+    background: url("../../img/bottom/playbar.png") no-repeat 999px 999px;
+}
+.sounda{
+    background-position: -2px -248px;
+}
+.fora{
+    background-position: -3px -344px;
+}
+.sounda:hover{
+    background-position: -31px -248px;
+}
+.fora:hover{
+    background-position: -33px -344px;
+}
+.texta{
+   width: 59px;
+    background-position: -42px -98px;
+    text-decoration: none;
+    text-indent: 25px;
+    line-height: 25px;
+    color: gainsboro;
+}
+.texta:hover{
+    background-position: -42px -98px;
+}
+.asynca{
+    position: relative;
+    left: 16px;
+    top: 2px;
+    display: block;
+    height: 18px;
+    width: 18px;
+    background: url("../../img/bottom/playbar.png") no-repeat 999px 999px;
+  /*  background-position: -100px -380px;*/
+    background-position: -80px -380px;
+
+}
+.bottom_playLeftTop{
+    position: absolute;
+    bottom: 40px;
+    height: 20px;
+    width: 100%;
+    cursor: pointer;
+
+}
+.asynca:visited{
+     background-position: -100px -380px ;
+    position: relative;
+}
+.userlogin
+{
+    box-shadow: 0 5px 16px rgba(0,0,0,0.8);
+    border: none;
+    background: #FFFFFF;
+}
+.userloginTop{
+    background: url("../../img/bottom/playbar.png") repeat-x 0px -8px;
+}
+.userloginTopHtml{
+    width: 80%;
+    height: 38px;
+    margin: 0 auto;
+    color: white;
+    text-align: left;
+    line-height:38px ;
+    font-weight: bold;
+    font-size: 14px;
+}
+.userloginCenter
+{
+    padding: 30px 0 43px;
+    background: #FFFFFF;
+}
+.userName,.passWrord{
+    width: 206px;
+    height: 19px;
+    margin: 0;
+    padding: 5px 6px 6px;
+    border: 1px solid #cdcdcd;
+    border-radius: 2px;
+    line-height: 19px;
+    margin-top: 10px;
+    list-style: none;
+    outline-offset: 0px;
+    utline: -webkit-focus-ring-color auto 0px;
+    color: grey;
+}
+.userName{
+margin-top: 30px;
+}
+input:focus{
+
+}
+.label{
+    height: 14px;
+    width: 220px;
+    margin-top: 10px;
+    color: #666;
+    font-size: 12px;
+}
+.label label{
+    display: inline-block;
+    position: relative;
+    top: 1px;
+}
+.label label input{
+    vertical-align: text-top;
+}
+.label a{
+    display: block;
+    float: right;
+    color: #666;
+}
+.label a:hover{
+    text-decoration: underline;
+}
+.submitBu{
+     height: 31px;
+    width: 200px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: greenyellow;
+    overflow: hidden;
+}
+.submitBu a{
+    display: inline-block;
+    height: 31px;
+    width: 100%;
+    line-height: 31px;
+    overflow: hidden;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+    text-align: center;
+    line-height: 31px;
+    color: white;
+    letter-spacing: 15px;
+    background: url("../../img/bottom/button2.png") repeat-x;
+    background-position: right -387px;
+    text-decoration: none;
+}
+.submitBu a:hover{
+    background-position: right -470px;
+    text-decoration: none;
+}
+.userloginBottonCenter{
+    height: 49px;
+    width:95%;
+    margin: auto;
+
+}
+.userloginBottonCenterLeft{
+    height: 48px;
+    width: 85px;
+    float: left;
+}
+.userloginBottonCenterRight{
+    height: 48px;
+    width: 121px;
+    float: right;
+}
+.userloginBottonCenterLeft a{
+     font-size: 12px;
+     text-decoration: none;
+     color: #0c72c3;
+     display: block;
+     height: 48px;
+     line-height: 48px;
+ }
+.userloginBottonCenterRight a{
+    text-align: right;
+    font-size: 12px;
+    text-decoration: none;
+    color: grey;
+    display: block;
+    float: right;
+    height: 48px;
+    line-height: 48px;
+
+}
+.userloginTopErrror{
+    text-align: center;
+    line-height: 38px;
+    position: relative;
+    top:-38px;
+    height: 100%;
+    width: 38px;
+    float: right;
+    color: grey;
+    cursor: pointer;
 }
