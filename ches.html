@@ -17,3 +17,19 @@
     </dl>
 </body>
 </html>
+<script>
+    $.ajax({
+        url: "http://s.music.163.com/search/get/?type=1&s=小黑&limit=2&jsonp=callback",
+        dataType: "jsonp",
+        data: {
+            'type': 1,
+            's': info,
+            'limit': 1
+        },
+        jsonp: "callback",
+        cache: false,
+        success: function(data) {
+            //function
+        }
+        })
+</script>

@@ -1646,3 +1646,105 @@ input:focus{
     color: grey;
     cursor: pointer;
 }
+.resultSongs{
+    display: none;
+    width: 240px;
+    /*height: 400px;*/
+    background: white;
+    position: absolute;
+    top: 38px;
+    left: 0px;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+}
+.resultSongsTop{
+    height: 39px;
+    border-bottom: 1px solid lightgrey;
+    width: 240px;
+    text-align: left;
+    line-height: 39px;
+    overflow: hidden;
+    text-indent: 5px;
+    color: grey;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.resultSongsLeft{
+    float: left;
+    width: 64px;
+    /*height: 360px;*/
+    border-right: 1px solid lightgrey;
+}
+.resultSongsRight{
+   /* height: 360px;*/
+    width: 175px;
+    float: right;
+}
+.resultSongsRight ul:nth-child(even){
+    background: #F9F8F8;
+}
+.oneSongs0,.songsName0,.songsMore0{
+    width: 64px;
+    /*border-bottom: 1px solid lightgrey;*/
+    /*height: 65px;*/
+}
+.songsMV0{
+    height: 100px;
+    width: 64px;
+}
+.oneSongs,.songsName,.songsMore{
+    width: 175px;
+    border-bottom: 1px solid lightgrey;
+
+}
+.songsMV{
+    width: 175px;
+}
+.oneSongs li{
+    width: 175px;
+    height: 20px;
+
+}
+.resultSongsRight li a{
+    height: 100%;
+    width: 100%;
+    display: block;
+    text-indent: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 20px;
+
+}
+.resultSongsRight li a:hover{
+    background:#E3E5E7;
+}
+.resultSongsRight .li1{
+    margin-top: 5px;
+}
+.oneSongs0 a,.oneSongs0 p,.songsName0 p,.songsMore0 p,.songsMV0 p{
+    margin-top: 4px;
+    text-indent: 7px;
+    line-height: 20px;
+    display: inline-block;
+    float: left;
+}
+.oneSongs0  a,.songsName0 a,.songsMore0  a,.songsMV0 a{
+    display: block;
+    float: left;
+    height: 20px;
+    width: 18px;
+    line-height: 20px;
+    text-indent: 5px;
+    background: grey;
+    background: url("../../img/contextImg/icon.png") no-repeat -32px -297px;
+}
+.songsName0 a{
+    background: url("../../img/contextImg/icon.png") no-repeat -47px -294px;
+}
+.songsMore0 a{
+    background: url("../../img/contextImg/icon.png") no-repeat -32px -314px;
+ }
+.songsMV0 a{
+    background: url("../../img/contextImg/icon.png") no-repeat -56px -855px;
+ }
