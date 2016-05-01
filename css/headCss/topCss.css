@@ -1748,3 +1748,10 @@ input:focus{
 .songsMV0 a{
     background: url("../../img/contextImg/icon.png") no-repeat -56px -855px;
  }
+#touchD{
+    position: absolute;
+    top: -15px;
+    left: 65px;
+    height: 73px;
+    width: 83px;
+}

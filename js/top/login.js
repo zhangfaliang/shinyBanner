@@ -10,14 +10,17 @@ document.addEventListener("DOMContentLoaded", function () {
         wrap.onmouseover = function (e) {
             e=e||window.event;
             var target=e.target;
-            if(/*target.id==="divLogin"*/target.className==="shiny")
-            divLogin.style.display = "block"
-            if (divLogin.style.display === "none") {
+            if(!target)return
+            if(target.id==="divLogin"||target.id==="shiny"||target.id==="touchD"){
                 divLogin.style.display = "block"
+                if (divLogin.style.display === "none") {
+                    divLogin.style.display = "block"
+                }
             }
+
         }
-        wrap.onmouseout = function (e) {
-            divLogin.style.display = "none"
+        wrap.onmouseleave = function (e) {
+                divLogin.style.display = "none"
 
         }
         // 关于top的显示与隐藏
