@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<script src="jquery-1.9.1.js"></script>
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,8 +9,19 @@
 
 </body>
 </html>
-<script src="jsonp.js"></script>
 <script>
-
+$.ajax({
+    url:'http://s.music.163.com/search/get',
+    data:{
+        type: 1,
+        s: "" + value + "",
+        limit: 10
+    },
+    type:'get',
+    dataType:'jsonp',
+    success:function (data) {
+        console.log(data)
+    }
+})
 
 </script>
