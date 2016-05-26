@@ -1028,12 +1028,14 @@ float: left;
     font-size: 10px;
     font-weight: normal;
 }
-.singName{
+.singName1{
+
+
     width: 220px;
     height: 380px;
     margin: 0 auto;
 }
-.singName li{
+.singName1 li{
     width: 100%;
     margin-top:20px ;
     height: 60px;
@@ -1044,7 +1046,7 @@ float: left;
     -ms-user-select: none;
     user-select: none;
 }
-.singName img {
+.singName1 img {
     display: block;
     float: left;
     background: forestgreen;
@@ -1052,7 +1054,7 @@ float: left;
     width: 62px;
 
 }
-.singName div{
+.singName1 div{
     height: 60px;
     width: 148px;
     float: right;
