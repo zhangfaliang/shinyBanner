@@ -2,25 +2,25 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>多条路线</title>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2"></script>
+    <script src="http://api.map.baidu.com/api?v=1.2" type="text/javascript"></script>
     <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 
 <body>
     <div id="driving_way" style="width:550px; float:left">
-        起点：<input type="text" id="startAdress"> 终点：
-        <input type="text" style="margin-bottom:10px;" id="endAdress">
+        起点：<input id="startAdress" type="text"> 终点：
+        <input id="endAdress" type="text" style="margin-bottom:10px;">
         <select style="margin-left:50px;">
 			<option value="0">最少时间</option>
 			<option value="1">最短距离</option>
 			<option value="2">避开高速</option>
 		</select>
-        <input type="button" id="result" value="查询路线" />
+        <input id="result" type="button" value="查询路线">
         <div id="r-result"></div>
     </div>
-    <div style="width:1000px;height:750px;border:1px solid gray; float:right" id="container"></div>
+    <div id="container" style="width:1000px;height:750px;border:1px solid gray; float:right"></div>
 
 </body>
 
@@ -57,4 +57,7 @@
             driving.search(start, end);
         }
     });
+    var ctrl = new BMapLib.TrafficControl({showPanel: false});   
+     map.addControl(ctrl);    
+     ctrl.setAnchor(BMAP_ANCHOR_BOTTOM_RIGHT);
 </script>
