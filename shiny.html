@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--添加title图片的方式-->
+    <link rel="shortcut icon" href="img/head/title/music.ico" type="image/x-icon"/>
+    <title>网易云音乐 听见的好听的时光</title>
+    <link rel="stylesheet" href="css/headCss/topCss.css?_=4156">
+    <script src="utils/animate.js?_=4516" type="text/javascript"></script>
+    <script src="utils/Event4.js?_=45116" type="text/javascript"></script>
+    <script src="utils/DOM.js?_=4516" type="text/javascript"></script>
+    <script src="js/top/login.js?_=4516" type="text/javascript"></script>
+    <script src="js/bottom/bottom.js?_=4156" type="text/javascript"></script>
+    <script src="js/top/userLogin.js?_=4156" type="text/javascript"></script>
+
+</head>
+<body id="#">
+<div id="scrollTop1" ><a href="#" class="scrollTop1"></a></div>
+<!--三个大的div 最大是加红边的 一个 top 一个是 wrap这是浮动着top的中间 -->
+<!--不用设置高度 只设度就行了-->
+<div class="g-topbar" >
+    <div class="m-top">
+        <div class="wrap">
+            <h1 class="logo"><a hidefocus="true" href="#">网易云音乐</a></h1>
+            <ul class="m-nav j-tflag">
+                <li class="fst">
+                    <span><a hidefocus="true" href="#" class="z-slt"><em>发现音乐</em><sub class="cor">
+                        &nbsp;</sub></a></span>
+                </li>
+                <li>
+                    <span><a data-res-action="bilog" hidefocus="true" href="#"><em>我的音乐</em><sub class="cor">
+                        &nbsp;</sub></a></span>
+                </li>
+                <li>
+                    <span><a hidefocus="true"><em>朋友</em><sub class="cor">&nbsp;</sub><i
+                            class="dot u-icn u-icn-68 f-alpha j-t" style="display:none;"></i></a></span>
+                </li>
+                <li class="lst">
+                    <span><a id="topbar-download-link" hidefocus="true" href="javascript:void(0);"
+                             data-module="download"><em>下载客户端</em><sub class="cor">&nbsp;</sub></a></span><sup
+                        class="hot">&nbsp;</sup>
+                </li>
+            </ul>
+            <div class="m-tophead f-pr j-tflag"  id="shiny"><a hidefocus="true"  href="javascript:void(0);" class="link shiny" >登录
+            </a>
+                <div class="m-tlist j-uflag" style="display:none;">
+                    <i class="arr"></i>
+                </div>
+            </div>
+            <a class="m-msg f-pr j-tflag" href="javascript:;" style="display:none;"></a>
+            <div class="m-srch f-pr j-suggest" id="g_search">
+                <input hidefocus="true" style="color:#999" id="searchInput" class=" m-srchInput" type="text" value="单曲/歌手/专辑/歌单/MV/用户"
+                       onfocus="if(this.value=this.defaultValue){this.value='';this.style.color='#000'}"
+                       onBlur="if(!value){value=defaultValue; this.style.color='#999'}">
+                <div class="resultSongs" id="resultSongs">
+
+
+
+                </div>
+            </div>
+            <div class="divLogin" id="divLogin">
+                <div id="touchD" ></div>
+                <ul>
+                    <li id="phoneLogin" index="1">
+                        <div class="logep"></div>
+                        <p class="logep1">手机号码登陆</p>
+                    </li>
+                    <li index="2">
+                        <div class="logep2"></div>
+                        <p class="logep1">微信</p>
+                    </li>
+                    <li index="3">
+                        <div class="logep3"></div>
+                        <p class="logep1">QQ登陆</p>
+                    </li>
+                    <li index="4">
+                        <div class="logep4"></div>
+                        <p class="logep1">新浪微博</p>
+                    </li>
+                    <li index="5">
+                        <div class="logep5"></div>
+                        <p class="logep1">网易邮箱登陆</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="g_nav2" class="m-subnavTop ">
+        <div class="wrap1 f-pr1">
+            <!--模拟前面的结构形成对应位置-->
+            <div class="wraph1"></div>
+            <ul class="nav">
+                <li><a hidefocus="true" data-module="discover" href="/discover" class="z-slt"><em>推荐</em></a></li>
+                <li><a hidefocus="true" data-module="toplist" href="javascript:void(0);"><em>排行榜</em></a></li>
+                <li><a hidefocus="true" data-module="playlist" href="javascript:void(0);"><em>歌单</em></a></li>
+                <li><a hidefocus="true" data-module="djradio" href="javascript:void(0);"><em>主播电台</em></a></li>
+                <li><a hidefocus="true" data-module="artist" href="javascript:void(0);"><em>歌手</em></a></li>
+                <li><a hidefocus="true" data-module="album" href="javascript:void(0);"><em>新碟上架</em></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="outer" class="outer">
+    <a hidefocus="true" id="btnl" href="javascript:void(0)" class="btnl click-flag f-alpha">&lt;</a>
+    <div id="inner" class="inner">
+        <div style='background:url("img/bg/1.gif") repeat'><img src="img/轮播图/1.jpg" alt=""></div>
+        <div><img src="img/轮播图/2.jpg" alt=""></div>
+        <div><img src="img/轮播图/3.jpg" alt=""></div>
+        <div><img src="img/轮播图/4.jpg" alt=""></div>
+        <div><img src="img/轮播图/5.jpg" alt=""></div>
+        <div><img src="img/轮播图/6.jpg" alt=""></div>
+        <div><img src="img/轮播图/7.jpg" alt=""></div>
+        <div><img src="img/轮播图/8.jpg" alt=""></div>
+    </div>
+    <a hidefocus="true" id="btnr" href="javascript:void(0)" class="btnr click-flag f-alpha">&gt;</a>
+    <ul id="but" class="but">
+        <li class="selectli"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="download">
+        <a id="side-download" href="javascript:void(0)" class="btn" hidefocus="true">下载客户端</a>
+        <p>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
+    </div>
+</div>
+<div id="discover-module" class="body_content">
+    <div class="content_wrap">
+        <div class="contentLeft">
+            <div class="left_wrap">
+                <div class="left_warp_fir"><a href="javascript:void(0)">热门推荐</a></div>
+                <div class="tab">
+                    <a href="javascript:void(0)">华语</a><span class="line">|</span>
+                    <a href="javascript:void(0)">流行</a><span class="line">|</span>
+                    <a href="javascript:void(0)">摇滚</a><span class="line">|</span>
+                    <a href="javascript:void(0)">民谣</a><span class="line">|</span>
+                    <a href="javascript:void(0)">电子</a></div>
+                <span class="more">
+                    <a href="javascript:void(0)">更多</a>
+                    <i class="more_bg">&nbsp;</i>
+                </span>
+            </div>
+            <ul>
+                <li>
+                    <div class="left_div_img">
+                        <img src="img/leftImg/left_img0.jpg" alt="">
+                        <a title="阳光里的声音碎片" href="javascript:void (0)"
+                           class="msk"></a>
+                        <div class="button">
+                            <a class="icon-play " title="播放" href="javascript:;"></a>
+                            <span class="icon-headset"></span>
+                            <span class="nb">25万</span>
+                        </div>
+                    </div>
+                    <p class="dec"><a title="种在耳朵里的歌开出了青春的花" class="tit s-fc0" href="javascript:void(0)">
+                        种在耳朵里的歌开出了青春的花
+                    </a></p>
+                </li>
+                <li>
+                    <div class="left_div_img">
+                        <img src="img/leftImg/left_img1.jpg" alt="">
+                        <a title="阳光里的声音碎片" href="javascript:void (0)"
+                           class="msk"></a>
+                        <div class="button">
+                            <a class="icon-play " title="播放" href="javascript:;"></a>
+                            <span class="icon-headset"></span>
+                            <span class="nb">25万</span>
+                        </div>
+                    </div>
+                    <p class="dec"><a title="种在耳朵里的歌开出了青春的花" class="tit s-fc0" href="javascript:void(0)">
+                        种在耳朵里的歌开出了青春的花
+                    </a></p>
+                </li>
+                <li>
+                    <div class="left_div_img">
+                        <img src="img/leftImg/left_img2.jpg" alt="">
+                        <a title="阳光里的声音碎片" href="javascript:void (0)"
+                           class="msk"></a>
+                        <div class="button">
+                            <a class="icon-play " title="播放" href="javascript:;"></a>
+                            <span class="icon-headset"></span>
+                            <span class="nb">25万</span>
+                        </div>
+                    </div>
+                    <p class="dec"><a title="种在耳朵里的歌开出了青春的花" class="tit s-fc0" href="javascript:void(0)">
+                        种在耳朵里的歌开出了青春的花
+                    </a></p>
+                </li>
+                <li>
+                    <div class="left_div_img">
+                        <img src="img/leftImg/left_img3.jpg" alt="">
+                        <a title="阳光里的声音碎片" href="javascript:void (0)"
+                           class="msk"></a>
+                        <div class="button">
+                            <a class="icon-play " title="播放" href="javascript:;"></a>
+                            <span class="icon-headset"></span>
+                            <span class="nb">25万</span>
+                        </div>
+                    </div>
+                    <p class="dec"><a title="种在耳朵里的歌开出了青春的花" class="tit s-fc0" href="javascript:void(0)">
+                        种在耳朵里的歌开出了青春的花
+                    </a></p>
+                </li>
+                <li>
+                    <div class="left_div_img">
+                        <img src="img/leftImg/left_img4.jpg" alt="">
+                        <a title="阳光里的声音碎片" href="javascript:void (0)"
+                           class="msk"></a>
+                        <div class="button">
+                            <a class="icon-play " title="播放" href="javascript:;"></a>
+                            <span class="icon-headset"></span>
+                            <span class="nb">25万</span>
+                        </div>
+                    </div>
+                    <p class="dec"><a title="种在耳朵里的歌开出了青春的花" class="tit s-fc0" href="javascript:void(0)">
+                        种在耳朵里的歌开出了青春的花
+                    </a></p>
+                </li>
+                <li>
+                    <div class="left_div_img">
+                        <img src="img/leftImg/left_img5.jpg" alt="">
+                        <a title="阳光里的声音碎片" href="javascript:void (0)"
+                           class="msk"></a>
+                        <div class="button">
+                            <a class="icon-play " title="播放" href="javascript:;"></a>
+                            <span class="icon-headset"></span>
+                            <span class="nb">25万</span>
+                        </div>
+                    </div>
+                    <p class="dec"><a title="种在耳朵里的歌开出了青春的花" class="tit s-fc0" href="javascript:void(0)">
+                        种在耳朵里的歌开出了青春的花
+                    </a></p>
+                </li>
+                <li>
+                    <div class="left_div_img">
+                        <img src="img/leftImg/left_img6.jpg" alt="">
+                        <a title="阳光里的声音碎片" href="javascript:void (0)"
+                           class="msk"></a>
+                        <div class="button">
+                            <a class="icon-play " title="播放" href="javascript:;"></a>
+                            <span class="icon-headset"></span>
+                            <span class="nb">25万</span>
+                        </div>
+                    </div>
+                    <p class="dec"><a title="种在耳朵里的歌开出了青春的花" class="tit s-fc0" href="javascript:void(0)">
+                        种在耳朵里的歌开出了青春的花
+                    </a></p>
+                </li>
+                <li>
+                    <div class="left_div_img">
+                        <img src="img/leftImg/left_img7.jpg" alt="">
+                        <a title="阳光里的声音碎片" href="javascript:void (0)"
+                           class="msk"></a>
+                        <div class="button">
+                            <a class="icon-play " title="播放" href="javascript:;"></a>
+                            <span class="icon-headset"></span>
+                            <span class="nb">25万</span>
+                        </div>
+                    </div>
+                    <p class="dec"><a title="种在耳朵里的歌开出了青春的花" class="tit s-fc0" href="javascript:void(0)">
+                        种在耳朵里的歌开出了青春的花
+                    </a></p>
+                </li>
+            </ul>
+            <div>
+                <a href="javascript:void(0)">
+                    <img src="img/leftImg/guanggao.jpg" alt="">
+                </a>
+            </div>
+            <div class="n_new">
+                <div class="left_warp_fir"><a href="javascript:void(0)">新碟上架</a></div>
+                 <span class="more">
+                    <a href="javascript:void(0)">更多</a>
+                    <i class="more_bg">&nbsp;</i>
+                </span>
+            </div>
+            <div class="left_wrap_total">
+                <div class="left_wrap_inner">
+                    <div class="inner_scroll" id="inner_scroll">
+                        <a href="javascrip:void(0)" id="inner_scroll_left"></a>
+                        <ul id="ul_a1">
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/01.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="I Believe 宋茜"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/02.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="super pet stop body"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/03.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="Dream 郑恩地"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/04.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="等我遇见你 李健"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/05.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="Longing For you 周笔畅"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+                            </li>
+                        </ul>
+                        <ul id="ul_a2">
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/01.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="I Believe 宋茜"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/02.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="super pet stop body"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/03.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="Dream 郑恩地"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/04.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="等我遇见你 李健"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/05.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="Longing For you 周笔畅"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+                            </li>
+                        </ul>
+                        <ul id="ul_a3">
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/01.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="I Believe 宋茜"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/02.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="super pet stop body"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/03.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="Dream 郑恩地"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/04.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="等我遇见你 李健"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/05.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="Longing For you 周笔畅"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+                            </li>
+                        </ul>
+                        <ul id="ul_a4">
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/01.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="I Believe 宋茜"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/02.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="super pet stop body"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/03.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="Dream 郑恩地"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/04.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="等我遇见你 李健"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+                            </li>
+                            <li>
+                                <div>
+                                    <img src="img/leftImg/new_image/05.jpg" alt="new_img">
+                                    <a href="javascript:void(0)" title="Longing For you 周笔畅"></a>
+                                    <a class="play" href="javascript:void(0)" title="播放"></a>
+                                </div>
+                                <p class="ul_p1"><a title="我是歌手第四季 双年巅峰会" href="javascript:void(0)" class="s-fc0 tit">我是歌手第四季
+                                    双年巅峰会</a></p>
+                                <p class="ul_p2" title="群星">
+                                    <a href="javascript:void(0)">群星</a>
+                                </p>
+                            </li>
+                        </ul>
+                        <a href="javascrip:void(0)" id="inner_scroll_right"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="n_bill">
+                <div class="left_warp_fir"><a href="javascript:void(0)">榜首</a></div>
+                 <span class="more">
+                    <a href="javascript:void(0)">更多</a>
+                    <i class="more_bg">&nbsp;</i>
+                </span>
+                <div class="n-bilst">
+                    <dl class="dl1">
+                        <dt class="dl1_top"></dt>
+                        <div class="cover">
+                            <img src="img/bottom/shoucang.jpg" alt="收藏" width="100%" height="100%">
+                            <a href="javascript:void(0)" class="msk" title="云音乐飙升榜"></a>
+                        </div>
+                        <div class="titl">
+                            <a href="javascript:void(0)" title="云音乐飙升榜"><h3 class="f-fs1 f-thide">云音乐飙升榜</h3></a>
+                        </div>
+                        <div id="btn">
+                            <a  class="play" href="javascript:;" title="播放"></a>
+                            <a class="cun" href="javascript:;" title="收藏"></a>
+                        </div>
+                       <dd class="dt_botton">
+                           <ul>
+                               <li >
+                                   <span class="no no-top">1</span>
+                                   <a href="javascript:void(0)" class="no_a"  title="我曾经也想过一了百了">我曾经也想过一了百了</a>
+                                   <div class="oper">
+                                       <a href="javascript:void(0)"  title="播放"  ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                   </div>
+                               </li>
+                               <li >
+                                   <span class="no no-top">2</span>
+                                   <a href="javascript:void(0)" class="no_a"  title="say it">say it</a>
+                                   <div class="oper">
+                                       <a href="javascript:void(0)"  title="播放"  ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                   </div>
+                               </li>
+                               <li >
+                                   <span class="no no-top">3</span>
+                                   <a href="javascript:void(0)" class="no_a"  title="向着光了的那方">向着光了的那方</a>
+                                   <div class="oper">
+                                       <a href="javascript:void(0)"  title="播放"  ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                   </div>
+                               </li>
+                               <li >
+                                   <span class="no no-top">4</span>
+                                   <a href="javascript:void(0)" class="no_a"  title="my show">my show</a>
+                                   <div class="oper">
+                                       <a href="javascript:void(0)"  title="播放"  ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                   </div>
+                               </li>
+                               <li >
+                                   <span class="no no-top">5</span>
+                                   <a href="javascript:void(0)" class="no_a"  title="如果你感觉快了你就拍拍手">如果你感觉快了你就拍拍手</a>
+                                   <div class="oper">
+                                       <a href="javascript:void(0)"  title="播放"  ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                   </div>
+                               </li>
+                               <li >
+                                   <span class="no no-top">6</span>
+                                   <a href="javascript:void(0)" class="no_a"  title="假如没有如果">假如没有如果</a>
+                                   <div class="oper">
+                                       <a href="javascript:void(0)"  title="播放"  ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                   </div>
+                               </li>
+                               <li >
+                                   <span class="no no-top">7</span>
+                                   <a href="javascript:void(0)" class="no_a"  title="速度快的覅是">速度快的覅是</a>
+                                   <div class="oper">
+                                       <a href="javascript:void(0)"  title="播放"  ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                   </div>
+                               </li>
+                               <li >
+                                   <span class="no no-top">8</span>
+                                   <a href="javascript:void(0)" class="no_a"  title="ahgknbfghsdg">ahgknbfghsdg</a>
+                                   <div class="oper">
+                                       <a href="javascript:void(0)"  title="播放"  ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                   </div>
+                               </li>
+                               <li >
+                                   <span class="no no-top">9</span>
+                                   <a href="javascript:void(0)" class="no_a"  title="转角">转角</a>
+                                   <div class="oper">
+                                       <a href="javascript:void(0)"  title="播放"  ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                   </div>
+                               </li>
+                               <li >
+                                   <span class="no no-top">10</span>
+                                   <a href="javascript:void(0)" class="no_a"  title="toup">toup</a>
+                                   <div class="oper">
+                                       <a href="javascript:void(0)"  title="播放"  ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                       <a href="javascript:void(0)" ></a>
+                                   </div>
+                               </li>
+
+                           </ul>
+                       </dd>
+                    </dl>
+                    <dl class="dl1">
+                        <dt class="dl1_top"></dt>
+                        <div class="cover">
+                            <img src="img/contextImg/xinge.jpg" alt="收藏" width="100%" height="100%">
+                            <a href="javascript:void(0)" class="msk" title="云音乐新歌榜"></a>
+                        </div>
+                        <div class="titl">
+                            <a href="javascript:void(0)" title="云音乐飙升榜"><h3 class="f-fs1 f-thide">云音乐新歌榜</h3></a>
+                        </div>
+                        <div id="btn1">
+                            <a  class="play" href="javascript:;" title="播放"></a>
+                            <a class="cun" href="javascript:;" title="收藏"></a>
+                        </div>
+                        <dd class="dt_botton">
+                            <ul>
+                                <li >
+                                    <span class="no no-top">1</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="我曾经也想过一了百了">我曾经也想过一了百了</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">2</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="say it">say it</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">3</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="向着光了的那方">向着光了的那方</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">4</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="my show">my show</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">5</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="如果你感觉快了你就拍拍手">如果你感觉快了你就拍拍手</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">6</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="假如没有如果">假如没有如果</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">7</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="速度快的覅是">速度快的覅是</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">8</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="ahgknbfghsdg">ahgknbfghsdg</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">9</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="转角">转角</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">10</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="toup">toup</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </dd>
+                    </dl>
+                    <dl class="dl1">
+                        <dt class="dl1_top"></dt>
+                        <div class="cover">
+                            <img src="img/contextImg/yuanc.jpg" alt="收藏" width="100%" height="100%">
+                            <a href="javascript:void(0)" class="msk" title="网易原创歌曲榜"></a>
+                        </div>
+                        <div class="titl">
+                            <a href="javascript:void(0)" title="云音乐飙升榜"><h3 class="f-fs1 f-thide">网易原创歌曲榜</h3></a>
+                        </div>
+                        <div id="btn2">
+                            <a  class="play" href="javascript:;" title="播放"></a>
+                            <a class="cun" href="javascript:;" title="收藏"></a>
+                        </div>
+                        <dd class="dt_botton">
+                            <ul>
+                                <li >
+                                    <span class="no no-top">1</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="我曾经也想过一了百了">我曾经也想过一了百了</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">2</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="say it">say it</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">3</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="向着光了的那方">向着光了的那方</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">4</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="my show">my show</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">5</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="如果你感觉快了你就拍拍手">如果你感觉快了你就拍拍手</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">6</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="假如没有如果">假如没有如果</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">7</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="速度快的覅是">速度快的覅是</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">8</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="ahgknbfghsdg">ahgknbfghsdg</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">9</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="转角">转角</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+                                <li >
+                                    <span class="no no-top">10</span>
+                                    <a href="javascript:void(0)" class="no_a"  title="toup">toup</a>
+                                    <div class="oper">
+                                        <a href="javascript:void(0)"  title="播放"  ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                        <a href="javascript:void(0)" ></a>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </dd>
+                    </dl>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+        <div class="contentRight">
+                   <div class="userlog">
+                 <p class="userSay">登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
+                    <a class="login">用户登录</a>
+                </div>
+                   <div class="right1">
+                   <h3 class="singsay">
+                    <span class="sing">入驻歌手</span>
+                    <a  class="singmore" href="javascript:;">查看全部</a>
+                </h3>
+                    <ul class="singName1">
+                      <li>
+                          <img src="img/right/right1.jpg" alt="">
+                          <div>
+                              <h4><span class="singNameh">张惠妹aMEI</span></h4>
+                              <p class="singNamep">台湾歌手张惠妹</p>
+                          </div>
+                      </li>
+                      <li>
+                          <img src="img/right/right2.jpg" alt="">
+                          <div>
+                              <h4><span class="singNameh">尚雯婕</span></h4>
+                              <p class="singNamep">原创电子唱作人</p>
+                          </div>
+                      </li>
+                      <li>
+                          <img src="img/right/right3.jpg" alt="">
+                          <div>
+                              <h4><span class="singNameh">羽泉组合</span></h4>
+                              <p class="singNamep">国内知名演唱组合 羽泉</p>
+                          </div>
+                      </li>
+                      <li>
+                          <img src="img/right/right4.jpg" alt="">
+                          <div>
+                              <h4><span class="singNameh">李志</span></h4>
+                              <p class="singNamep">个体音乐人李志</p>
+                          </div>
+                      </li>
+                      <li>
+                          <img src="img/right/right5.jpg" alt="">
+                          <div>
+                              <h4><span class="singNameh">马頔麻油叶</span></h4>
+                              <p class="singNamep">民谣音乐人</p>
+                          </div>
+                      </li>
+                  </ul>
+                       <div class="apply">
+                           <a  href="javascript:void(0)" hidefocus="true" class="u-btn2 u-btn2-1"><i>申请成为网易音乐人</i></a>
+                       </div>
+                       <div class="right2">
+                           <h3 >热门DJ</h3>
+                           <ul class="dt">
+                               <li>
+                                   <a href="javascript:;" class="putc">
+                                   <img src="img/right/infor1.jpg" alt="">
+                               </a>
+                                   <div class="info">
+                                       <p><a href="javascript:;" class="  ">灵伟</a> <sup class="info_img"></sup>
+                                       </p>
+                                       <p class=" ">电台DJ、资深乐评人。</p>
+                                   </div>
+                               </li>
+                               <li>
+                                   <a href="javascript:;" class="putc">
+                                   <img src="img/right/infor2.jpg" alt="">
+                               </a>
+                                   <div class="info">
+                                       <p><a href="javascript:;" class="  ">庞舸</a> <sup class="info_img"></sup>
+                                       </p>
+                                       <p class=" ">深圳电台飞扬971主持人</p>
+                                   </div>
+                               </li>
+                               <li>
+                                   <a href="javascript:;" class="putc">
+                                   <img src="img/right/infor3.jpg" alt="">
+                               </a>
+                                   <div class="info">
+                                       <p><a href="javascript:;" class="  ">林海</a> <sup class="info_img"></sup>
+                                       </p>
+                                       <p class=" ">著名音乐节目主持人。</p>
+                                   </div>
+                               </li>
+                               <li>
+                                   <a href="javascript:;" class="putc">
+                                   <img src="img/right/infor4.jpg" alt="">
+                               </a>
+                                   <div class="info">
+                                       <p><a href="javascript:;" class="  ">阿鹏叔</a> <sup class="info_img"></sup>
+                                       </p>
+                                       <p class=" ">桒惪SOUND创办人</p>
+                                   </div>
+                               </li>
+                               <li>
+                                   <a href="javascript:;" class="putc">
+                                   <img src="img/right/infor5.jpg" alt="">
+                               </a>
+                                   <div class="info">
+                                       <p><a href="javascript:;" class="  ">桒惪SOUND创办人</a> <sup class="info_img"></sup>
+                                       </p>
+                                       <p class=" ">独立DJ，CRI环球旅游广播特邀DJ</p>
+                                   </div>
+                               </li>
+                           </ul>
+                       </div>
+              </div>
+        </div>
+    </div>
+
+</div>
+<div id="bottom">
+    <div class="bottom_center">
+        <div class="bottom_center1">
+            <a class="cd" href="javascript:void(0)">
+                <span class="sp1">独立音乐人招募计划</span><br>
+                <span class="sp2">加入我们 即将与超过亿万乐迷互动</span>
+            </a>
+        </div>
+        <div class="bottom_center2">
+            <a class="cd1" href="javascript:void(0)">
+                <span class="sp1">音乐专栏招募计划</span><br>
+                <span class="sp2">加入我们 与同道中人交流心得</span>
+            </a>
+        </div>
+        <div class="bottom_center3">
+            <p>
+                <a href="javascript:void(0)" >关于网易</a><span>-</span>
+                <a href="javascript:void(0)" >客户服务</a><span>-</span>
+                <a href="javascript:void(0)" >服务条款</a><span>-</span>
+                <a href="javascript:void(0)" >网站导航</a>
+                网易公司版权所有©1997-2016</p>
+
+        </div>
+    </div>
+</div>
+<div class="bottom_play" id="bottom_play">
+    <div class="bottom_playLeftTop"></div>
+    <div class="bottom_playLeft" id="bottom_playLeft">
+        <div class="playCenter">
+            <div class="playCenterLeft">
+                <a href="javascript:;" class="lefta"></a>
+                <a href="javascript:;" class="centera"></a>
+                <a href="javascript:;" class="righta"></a>
+            </div>
+            <a href="javascript:;" class="playPac"><img src="img/bottom/playamg.jpg" alt=""></a>
+            <div class="comePlay">
+                <div class="comePlayTop">
+                    <a href="javascript:;" class="singName">我曾经也想过一了百了</a>
+                    <a href="javascript:;" class="singMove"></a>
+                    <a href="javascript:;" class="perporName">汤唯</a>
+                    <a href="javascript:;" class="singLink"></a>
+                </div>
+                <div class="playing">
+                    <span class="playingLeft"></span>
+                    <div class="playingCenter"></div>
+                    <span class="playingRigth"></span>
+                </div>
+                <span class="timing">00:00/00:00</span>
+
+            </div>
+            <div class="addAndC">
+                <a href="javascript:;" class="adda"></a>
+                <a href="javascript:;" class="showa"></a>
+            </div>
+            <div class="sound">
+                <a href="javascript:;" class="sounda"></a>
+                <a href="javascript:;" class="fora"></a>
+                <a href="javascript:;" class="texta">20</a>
+            </div>
+        </div>
+
+    </div>
+    <div class="bottom_playRight">
+        <div class="async">
+            <a href="javascript:;" id="asynca" class="asynca"></a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="js/centerCss/轮播图/carousel.js" type="text/javascript"></script>
+<script src="js/centerCss/轮播图/carousela.js" type="text/javascript"></script>
+<script src="js/jsonp/jsonp.js"></script>
+
+
+
+
