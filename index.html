@@ -164,4 +164,8 @@
           map.ShowTrafficLegend(100, 100); //设置实时路况图例的位置，x、y分别表示距离屏幕坐标左上角的像素位置。如果不设置的话，默认显示在屏幕右下角
           map.SetTrafficLegendText("The traffic dude!"); //设置图例的文字说明，不过好像会被默认的文字覆盖掉，我在研究一下。不影响使用
       } 
+      map.addEventListener('touchstart',function(e){
+
+        alert(0)
+      })
 </script>
