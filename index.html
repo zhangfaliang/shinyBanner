@@ -18,14 +18,17 @@
         }
         
         #driving_way {
-            width: 100%;
-            position: relative;
+            position: absolute;
+            top:0;
+            bottom:0;
+            left: 0;
+            right:0;
             margin-top: 10px;
+            display: flex;
+            flex-direction:column;
         }
         
         .searchIn {
-            width: 30%;
-            float: left;
             padding-left: 10px;
         }
         
@@ -50,12 +53,9 @@
         }
         
         #container {
-            position: absolute;
-            width: 65%;
-            height: 95%;
+            flex:1;
             border: 1px solid gray;
-            right: 10px;
-            top: 10px;
+           
         }
         
         @media only screen and (max-width: 768px) {
@@ -85,9 +85,9 @@
             <!-- <input type="button" id="result" value="查询路线" /> -->
             <div id="r-result"></div>
         </div>
-
+        <div id="container"></div>
     </div>
-    <div id="container"></div>
+   
 
 </body>
 
