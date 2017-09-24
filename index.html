@@ -2,25 +2,92 @@
 <html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>多条路线</title>
-    <script src="http://api.map.baidu.com/api?v=1.2" type="text/javascript"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no,width=device-width" />
+    <title>驾车路线</title>
+
+    <link href="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.js"></script>
     <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        #driving_way {
+            width: 100%;
+            position: relative;
+            margin-top: 10px;
+        }
+        
+        .searchIn {
+            width: 30%;
+            float: left;
+            padding-left: 10px;
+        }
+        
+        #startAdress {
+            width: 60%;
+        }
+        
+        #endAdress {
+            width: 60%;
+            margin: 10px 0;
+        }
+        
+        #time {
+            width: 25%;
+            margin-left: 10%;
+            padding: 0;
+        }
+        
+        #r-result {
+            margin-top: 20px;
+            width: 100%;
+        }
+        
+        #container {
+            position: absolute;
+            width: 65%;
+            height: 95%;
+            border: 1px solid gray;
+            right: 10px;
+            top: 10px;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            #time {
+                font-size: 10px;
+                text-align: center;
+                width: 40%;
+                margin: 0;
+                padding: 0;
+            }
+            #r-result {
+                margin-top: 20px;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div id="driving_way" style="width:550px; float:left">
-        起点：<input id="startAdress" type="text"> 终点：
-        <input id="endAdress" type="text" style="margin-bottom:10px;">
-        <select style="margin-left:50px;">
-			<option value="0">最少时间</option>
-			<option value="1">最短距离</option>
-			<option value="2">避开高速</option>
-		</select>
-        <input id="result" type="button" value="查询路线">
-        <div id="r-result"></div>
+    <div id="driving_way">
+        <div class="searchIn">
+            起点：<input type="text" id="startAdress"></br>
+            终点：<input type="text" id="endAdress"></br>
+
+            <input type="button" value="最少时间查询" id="time" />
+
+            <!-- <input type="button" id="result" value="查询路线" /> -->
+            <div id="r-result"></div>
+        </div>
+
     </div>
-    <div id="container" style="width:1000px;height:750px;border:1px solid gray; float:right"></div>
+    <div id="container"></div>
 
 </body>
 
@@ -33,31 +100,70 @@
     map.addControl(new BMap.OverviewMapControl()); //添加缩略地图控件
     map.enableScrollWheelZoom(true); //缩放和扩大
 
-    map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);
-    //三种驾车策略：最少时间，最短距离，避开高速
-    var routePolicy = [BMAP_DRIVING_POLICY_LEAST_TIME, BMAP_DRIVING_POLICY_LEAST_DISTANCE, BMAP_DRIVING_POLICY_AVOID_HIGHWAYS];
-    $("#result").click(function() {
+    var routePolicy = BMAP_DRIVING_POLICY_LEAST_TIME;
+    $("#time").click(function() {
+
         var start = $("#startAdress").val();
         var end = $('#endAdress').val();
         map.clearOverlays();
-        var i = $("#driving_way select").val();
-        search(start, end, routePolicy[i]);
+        var i = $("#driving_way #time").val();
+        search(start, end, routePolicy);
+
+        /*   var a = new BMap.DrivingRouteResult.getNumRoutes(3);
+          console.log(a); */
 
         function search(start, end, route) {
             var driving = new BMap.DrivingRoute(map, {
                 renderOptions: {
                     map: map,
                     autoViewport: true,
-                    enableDragging: true, //拖动路线
-                    panel: "r-result"
+                    enableDragging: true
                 },
                 policy: route
             });
 
             driving.search(start, end);
         }
+
+        //距离时间
+        var output = "从" + start + "到" + end + "驾车需要： ";
+        var searchComplete = function(results) {
+            if (transit.getStatus() != BMAP_STATUS_SUCCESS) {
+                return;
+            }
+            var plan = results.getPlan(0);
+            output += plan.getDuration(true) + "\n"; //获取时间
+            output += "总路程为：";
+            output += plan.getDistance(true) + "\n"; //获取距离
+        }
+        var transit = new BMap.DrivingRoute(map, {
+            renderOptions: {
+                map: map
+            },
+            onSearchComplete: searchComplete,
+            onPolylinesSet: function() {
+                setTimeout(function() {
+                    $("#r-result").html(output);
+                }, "1000");
+            }
+        });
+        transit.search(start, end);
     });
-    var ctrl = new BMapLib.TrafficControl({showPanel: false});   
-     map.addControl(ctrl);    
-     ctrl.setAnchor(BMAP_ANCHOR_BOTTOM_RIGHT);
+
+
+
+
+    /*   //实时路况
+      var ctrl = new BMapLib.TrafficControl({
+          showPanel: false //是否显示路况提示面板
+      });
+      map.addControl(ctrl);
+      ctrl.setAnchor(BMAP_ANCHOR_BOTTOM_RIGHT); //定位 
+      ctrl.ShowTraffic();
+
+      function ShowTraffic() {
+          map.LoadTraffic(true); //显示实时路况
+          map.ShowTrafficLegend(100, 100); //设置实时路况图例的位置，x、y分别表示距离屏幕坐标左上角的像素位置。如果不设置的话，默认显示在屏幕右下角
+          map.SetTrafficLegendText("The traffic dude!"); //设置图例的文字说明，不过好像会被默认的文字覆盖掉，我在研究一下。不影响使用
+      } */
 </script>
