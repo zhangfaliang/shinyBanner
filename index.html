@@ -5,7 +5,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf8" />
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no,width=device-width" />
     <title>驾车路线</title>
-
+    <script>
+        
+        //移动端判断html字体大小
+        (function(b,a){function c(){d=100*Math.min(e.getBoundingClientRect().width,a.maxWidth)/a.desinWidth;e.style.fontSize=d+"px"}var e=b.document.documentElement,d=100,f;a.desinWidth=640;a.maxWidth=640;a.init=function(){b.addEventListener("resize",function(){clearTimeout(f);f=setTimeout(c,300)},!1);c()};a.px2rem=function(v){return v/d;}})(window,window.adaptive||(window.adaptive={}));adaptive.init();
+    
+    </script>
     <link href="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.2"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.js"></script>
@@ -23,39 +28,32 @@
             bottom:0;
             left: 0;
             right:0;
-            margin-top: 10px;
+            box-sizing: border-box;
+            padding: .2rem;
             display: flex;
             flex-direction:column;
         }
         
         .searchIn {
-            padding-left: 10px;
+            font-size: .3rem;
         }
         
-        #startAdress {
-            width: 60%;
-        }
-        
-        #endAdress {
-            width: 60%;
-            margin: 10px 0;
+        #endAdress,#startAdress {
+            width: 4rem;
+           
         }
         
         #time {
-            width: 25%;
-            margin-left: 10%;
-            padding: 0;
+           width: 1rem;
         }
         
         #r-result {
-            margin-top: 20px;
             width: 100%;
         }
         
         #container {
             flex:1;
             border: 1px solid gray;
-           
         }
         
         @media only screen and (max-width: 768px) {
